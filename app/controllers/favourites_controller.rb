@@ -18,6 +18,6 @@ class FavouritesController < ApplicationController
     @favourite = Favourite.find(params[:id])
     @favourite.destroy
     # No need for app/views/restaurants/destroy.html.erb
-    redirect_to favourites_path(@favourite)
+    redirect_to favourites_path
   end
 end

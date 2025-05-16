@@ -1,5 +1,5 @@
 <% @favourites.each do |favourite| %>
-  <p><%= favourite.car.model %></p>
+  <%= link_to favourite.car.model, car_path(favourite.car) %>
   <p><%= favourite.car.brand %></p>
   <p><%= favourite.car.year %></p>
   <p><%= favourite.car.fuel %></p>
@@ -8,3 +8,5 @@
           data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
         %>
 <% end %>
+
+<%= link_to "Back to home", cars_path %>
